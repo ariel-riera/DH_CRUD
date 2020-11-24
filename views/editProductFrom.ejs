@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Edit Producto
+        <%= idFound.id %>
+    </title>
+</head>
+
+<body>
+    <h1>Edit Producto
+        <%= idFound.id %>
+    </h1>
+    <form action="/products/edit/<%= idFound.id %>" method="POST">
+        <input type="hidden" name="id" id="id" value="<%= idFound.id %>">
+        <br>
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" value="<%= idFound.name %>">
+        <br>
+        <label for="price">Precio</label>
+        <input type="number" name="price" id="price" value="<%= idFound.price %>">
+        <br>
+        <label for="desc">Descripción</label>
+        <input type="text" name="desc" id="desc" value="<%= idFound.desc %>">
+        <br>
+        <label for="brand">Marca</label>
+        <input type="text" name="brand" id="brand" value="<%= idFound.brand %>">
+        <br>
+        <label for="stock">Stock</label>
+        <input type="number" name="stock" id="stock" value="<%= idFound.stock %>">
+        <br>
+        <button type="submit">Editar producto</button>
+        <br>
+        <br>
+        <a href="/"><button type="button">Inicio</button></a>
+    </form>
+</body>
+
+</html>

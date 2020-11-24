@@ -1,0 +1,30 @@
+body {
+    padding: 75px;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.crud {
+    border: 1px #669fd2 solid;
+    width: 240px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border-radius: 5px;
+}
+
+
+/* label {
+    margin-bottom: 5px;
+} */
+
+input {
+    background: aliceblue;
+    display: block;
+    font-family: arial;
+}

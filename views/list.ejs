@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Usuarios Registrados</title>
+</head>
+
+<body>
+    <ul>
+        <% dataProducts.forEach(function(product){ %>
+            <li style="list-style: none;">
+                Nombre:
+                <%= product.name %> / Precio:
+                    <%= product.price %> / Marca:
+                        <%= product.brand %> / Stock:
+                            <%= product.stock %> /
+                                <a href="/products/edit/<%= product.id %>">Editar producto</a> -
+                                <a href="/products/delete/<%= product.id %>">Borrar producto</a>
+            </li>
+            <% }); %>
+    </ul>
+    <br>
+    <br>
+    <a href="/"><button type="button">Inicio</button></a>
+</body>
+
+</html>
